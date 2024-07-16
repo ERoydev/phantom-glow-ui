@@ -1,0 +1,22 @@
+
+/* Base Button */
+.button {
+    @apply font-bold py-2 px-4 rounded ;
+  }
+  
+/* Variants */
+.primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white;
+}
+
+.light {
+    @apply bg-white hover:bg-gray-100 text-gray-800 border border-gray-400;
+}
+
+.success {
+    @apply bg-green-500 hover:bg-green-700 text-white;
+}
+
+.danger {
+    @apply bg-red-500 hover:bg-red-700 text-white;
+}
