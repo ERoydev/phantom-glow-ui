@@ -2,40 +2,44 @@ import React from 'react';
 import styles from './Button.module.css';
 import classNames from 'classnames';
 
-type ButtonVariant = 'primary' | 'light' | 'success' | 'danger';
+type ButtonVariant = 'default' | 'success' | 'danger' | 'yellow' | 'purple' | 'midnight';
 
 interface ButtonProps {
-  label: string;
-  onClick: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  className?: string;
+    label: string;
+    onClick: () => void;
+    type?: 'button' | 'submit' | 'reset';
+    className?: string;
 }
 
 const buttonStyles: { [key in ButtonVariant]: string } = {
-  primary: styles.primary,
-  light: styles.light,
-  success: styles.success,
-  danger: styles.danger,
-  // Add more variants here
+    default: styles.default,
+    success: styles.success,
+    danger: styles.danger,
+    yellow: styles.yellow,
+    purple: styles.purple,
+    midnight: styles.midnight,
 };
 
 const ButtonFactory = (variant: ButtonVariant): React.FC<ButtonProps> => {
-  const Button: React.FC<ButtonProps> = ({ label, onClick, type = 'button', className }) => {
+    const Button: React.FC<ButtonProps> = ({ label, onClick, type = 'button', className }) => {
 
-    const buttonClass = classNames(styles.button, buttonStyles[variant], className)
+        const buttonClass = classNames(styles.button, buttonStyles[variant], className)
 
-    return (
-      <button
-        type={type}
-        onClick={onClick}
-        className={buttonClass}
-      >
-        {label}
-      </button>
-    );
-  };
+        return (
+            <button
+                type={type}
+                onClick={onClick}
+                className={buttonClass}
+                >
+                <span className='relative justify-center items-center'>
+                    {label}
+                </span>
+            </button>
 
-  return Button;
+        );
+    };
+
+    return Button;
 };
 
 export default ButtonFactory;

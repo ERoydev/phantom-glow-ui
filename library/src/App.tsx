@@ -1,4 +1,4 @@
-import { DangerButton, LightButton, PrimaryButton } from "./components/Button"
+import {  YellowButton} from "./components/Button"
 
 function App() {
 
@@ -7,9 +7,10 @@ function App() {
   }
 
   return (
-    <>
-      <PrimaryButton label='Emil' onClick={handleClick}/>
-    </>
+    <div className="py-10 px-10">
+      <YellowButton label='Get Started' onClick={handleClick} />
+
+    </div>
   )
 }
 

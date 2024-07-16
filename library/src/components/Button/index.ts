@@ -1,6 +1,13 @@
 import ButtonFactory from "./ButtonFactory";
 
-export const PrimaryButton = ButtonFactory('primary');
-export const LightButton = ButtonFactory('light');
+// Ordinary Buttons
+export const DefaultButton = ButtonFactory('default');
 export const SuccessButton = ButtonFactory('success');
 export const DangerButton = ButtonFactory('danger');
+export const YellowButton = ButtonFactory('yellow');
+export const PurpleButton = ButtonFactory('purple');
+
+
+
+// Special Buttons
+export const MidnightButton = ButtonFactory('midnight');
