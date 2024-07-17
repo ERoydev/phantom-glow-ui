@@ -1,4 +1,4 @@
-import {  YellowButton} from "./components/Button"
+import { MidnightButton, SuccessButton } from "./components/Button"
 
 function App() {
 
@@ -8,7 +8,8 @@ function App() {
 
   return (
     <div className="py-10 px-10">
-      <YellowButton label='Get Started' onClick={handleClick} />
+      <MidnightButton label="Get Started" onClick={handleClick} variant="solid" rounded />
+      <SuccessButton label="Get Started" onClick={handleClick} variant="solid" rounded />
 
     </div>
   )

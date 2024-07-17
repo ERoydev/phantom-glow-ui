@@ -7,7 +7,5 @@ export const DangerButton = ButtonFactory('danger');
 export const YellowButton = ButtonFactory('yellow');
 export const PurpleButton = ButtonFactory('purple');
 
-
-
 // Special Buttons
-export const MidnightButton = ButtonFactory('midnight');
+export const MidnightButton = ButtonFactory('midnigth');
